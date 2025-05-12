@@ -8,21 +8,21 @@ EXEC sp_help USA_ONLINE_1
 
 -- [CLEANING PROCESS]
 
-SELECT *
-FROM 
-USA_ONLINE_1 --(View table)
+	SELECT *
+	FROM 
+	USA_ONLINE_1 --(View table)
 
-ALTER TABLE 
-USA_ONLINE_1
-DROP COLUMN 
-Column9, Column10; -- (Cleaning process(Column removed)
+	ALTER TABLE 
+	USA_ONLINE_1
+	DROP COLUMN 
+	Column9, Column10; -- (Cleaning process(Column removed)
+	
+	Update 
+	USA_ONLINE_1
+	SET 
+	Revenue_growth = Replace(Revenue_growth, '%','') ---  Cleaning process (removing of %)
 
-Update 
-USA_ONLINE_1
-SET 
-Revenue_growth = Replace(Revenue_growth, '%','') ---  Cleaning process (removing of %)
-
--- ANALYSIS
+#### ANALYSIS
 
 --1 Count of Company
 
@@ -238,7 +238,8 @@ FINDINGS AND INSIGHT
    - States with the lowest company counts include Idaho, Rhode Island, Oregon, Indiana, Kentucky, Maryland, Missouri, Nebraska, and Cook County (Illinois).
 
 12. Top Growth Performers (60%+ Growth):  
-   The following companies reported **revenue growth above 60%**:
+
+The following companies reported **revenue growth above 60%**:
    - TD Synnex(Infotech)  
    - World Fuel Services (Petroleum & Logistics)  
    - United Airlines, Delta Air Lines, American Airlines (Airlines)  
@@ -254,7 +255,7 @@ FINDINGS AND INSIGHT
    - Growing Companies($50,000 � $299,999 million): 80 companies  
    - Matured Companies(> $300,000 million): 7 companies
 
-RECOMMENDATION
+#### RECOMMENDATION
 
 1. Invest in Emerging Sectors: High-growth companies in the Infotech, Petroleum & Logistics, 
    and Airlines sectors show promising ROI potential and warrant closer attention.
@@ -267,14 +268,14 @@ RECOMMENDATION
 
 4. Monitor Industry Performance: Industries with only one company but high revenue (e.g., Electronics, Health) may offer untapped potential.
 
-CONCLUSION
+#### CONCLUSION
 
 The analysis highlights significant disparities in revenue generation and growth potential across industries and states. 
 While large companies like Walmart drive top-line performance, lesser-represented industries (e.g., Infotech, Electronics) 
 are showing strong growth signals. Geographically, states like Washington and California emerge as economic hotspots, 
 while others remain underrepresented.
 
-FURTHER ANALYSIS
+#### FURTHER ANALYSIS
 
 1. Correlation Between Employee Size and Revenue: Does larger staff directly impact revenue performance?
 

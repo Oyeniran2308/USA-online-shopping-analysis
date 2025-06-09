@@ -1,6 +1,6 @@
 ###	PROJECT TITLE: USA online shopping analysis
 ###	DATE: 3rd of May, 2025
-###	OBJECTIVE: To carryout Exploratory Data Analysis on the USA online shopping dataset.
+###	OBJECTIVE: To carryout Exploratory Data Analysis on the USA online shopping dataset using SQL
 ###	DATASET DESCRIPTION: The USA online shopping dataset contain details about company,
 	the industry they belong, revenue generated, state and city their headquater are located.
 
